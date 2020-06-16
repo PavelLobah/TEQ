@@ -361,6 +361,9 @@ table tbody tr:hover {
       overflow: hidden;
       text-overflow: ellipsis;
       margin: 0px 50px 0px 0px;
+      @media screen and (max-width: 1400px) {
+         max-width: 320px;
+      }
    }
    .head {
       font-size: 14px;
