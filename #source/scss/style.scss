@@ -1,0 +1,524 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import url("https://fonts.googleapis.com/css?family=Inder:regular");
+@import url("https://fonts.googleapis.com/css?family=Inter:100, 200, 300, regular, 500, 600, 700, 800, 900");
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "Inter";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1170;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+   color: #000;
+   font-size: 14px;
+   &.lock {
+      overflow: hidden;
+   }
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+   &.loaded {
+   }
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+   max-width: $mw + px;
+   margin: 0 auto;
+   width: 100%;
+   @media (max-width: $md1+px) {
+      max-width: 970px;
+   }
+   @media (max-width: $md2+px) {
+      max-width: 750px;
+   }
+   @media (max-width: $md3+px) {
+      max-width: none;
+      padding: 0 10px;
+   }
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+// @import "forms.scss";
+// @import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "../../js/fancybox/jquery.fancybox.scss";
+//@import "datepicker.scss";
+//@import "fontawesome.scss";
+//@import "popover.min.scss";
+//@import "baguetteBox.scss";
+//@import "pagging.scss";
+// //@import "icons.scss";
+// @import "popup.scss";
+// @import "header.scss";
+// @import "footer.scss";
+// @import "home.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.logo {
+   @include flexbox;
+   margin: 52px 0px 45px 0px;
+
+   &__img {
+      img {
+         width: 91.34px;
+         height: 45.02px;
+      }
+   }
+
+   &__text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.01em;
+      color: #201f25;
+      opacity: 0.7;
+      margin: 5px 0px 0px 13px;
+   }
+}
+
+.user {
+   @include flexbox;
+   align-items: center;
+   margin: 0px 0px 78px 0px;
+   &__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      margin: 0px 12px 0px 0px;
+      @include flexbox;
+      align-items: center;
+
+      :hover {
+      }
+   }
+
+   &__name {
+      flex-grow: 1;
+      font-size: 16px;
+      line-height: 16px;
+   }
+   &__button {
+   }
+
+   &__exit {
+      background: url(/img/user/выход.svg) 0 0 / contain no-repeat;
+      display: block;
+      width: 24px;
+      height: 24px;
+
+      &:hover {
+         background: url(/img/user/exit_to_app_24px.svg) 50% no-repeat;
+      }
+   }
+}
+
+.sidenav__container {
+   margin: 0 32px;
+}
+
+.sidenav {
+   background: #ffffff;
+   /* big shadow */
+
+   box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.05), 0px 8px 24px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.05);
+   // transform: matrix(-1, 0, 0, 1, 0, 0);
+   height: 100%; /* Full-height: remove this if you want "auto" height */
+   width: 330px; /* Set the width of the sidebar */
+   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+   z-index: 1; /* Stay on top */
+   top: 0; /* Stay at the top */
+   left: 0;
+   overflow-x: hidden; /* Disable horizontal scroll */
+   overflow: hidden;
+}
+
+.menu a {
+   display: block;
+}
+
+.menu {
+   &__link {
+      @include flexbox;
+      align-items: center;
+      margin: 0px 0px 36px 0px;
+   }
+
+   &__icon {
+      margin: 0px 28px 0px 0px;
+      &_1 {
+         background: url(/img/menu/01.png) 50% no-repeat;
+         display: block;
+         width: 24px;
+         height: 24px;
+
+         &:hover {
+            background: url(/img/menu/activ/01.png) 50% no-repeat;
+         }
+      }
+      &_activ {
+         background: url(/img/menu/activ/01.png) 50% no-repeat;
+      }
+      &_2 {
+         background: url(/img/menu/02.png) 50% no-repeat;
+         display: block;
+         width: 24px;
+         height: 24px;
+
+         &:hover {
+            background: url(/img/menu/activ/02.png) 50% no-repeat;
+         }
+         &_activ {
+            background: url(/img/menu/activ/02.png) 50% no-repeat;
+         }
+      }
+
+      &_3 {
+         background: url(/img/menu/03.png) 50% no-repeat;
+         display: block;
+         width: 24px;
+         height: 24px;
+
+         &:hover {
+            background: url(/img/menu/activ/03.png) 50% no-repeat;
+         }
+         &_activ {
+            background: url(/img/menu/activ/03.png) 50% no-repeat;
+         }
+      }
+
+      &_4 {
+         background: url(/img/menu/04.png) 50% no-repeat;
+         display: block;
+         width: 24px;
+         height: 24px;
+
+         &:hover {
+            background: url(/img/menu/activ/04.png) 50% no-repeat;
+         }
+         &_activ {
+            background: url(/img/menu/activ/04.png) 50% no-repeat;
+         }
+      }
+   }
+
+   &__text {
+      font-size: 14px;
+      line-height: 20px;
+      color: #201f25;
+      &:hover,
+      :active {
+         font-weight: bold;
+         font-size: 14px;
+         line-height: 20px;
+         color: #1eb2e0;
+      }
+
+      &_activ {
+         font-weight: bold;
+         font-size: 14px;
+         line-height: 20px;
+         color: #1eb2e0;
+      }
+   }
+}
+
+/* Style page content */
+//====================================================================================================
+.main {
+   // width: 1591px;
+   // position: fixed;
+   margin-left: 330px;
+
+   &__container {
+      margin: 0px 44px;
+   }
+
+   &__header {
+      background: linear-gradient(180deg, #eef2f5 0%, #f4f5fa 100%);
+      margin: 0px 0px 24px 0px;
+   }
+
+   &__title {
+      padding: 60px 0px 40px 0px;
+   }
+   &__subtitle {
+      display: inline-block;
+      border-bottom: 4px solid #1eb2e0;
+   }
+
+   &__button {
+   }
+
+   &__body {
+   }
+
+   &__table {
+   }
+}
+.title {
+   font-size: 32px;
+   line-height: 40px;
+   letter-spacing: 0.01em;
+   color: #201f25;
+}
+.subtitle {
+   font-size: 24px;
+   line-height: 34px;
+   letter-spacing: 0.01em;
+   color: #1eb2e0;
+}
+
+.button {
+   display: inline-block;
+   color: #fff;
+   user-select: none; /* Убираем текстовое выделение */
+   text-decoration: none; /* Убираем подчеркивание */
+   outline: none; /* Убираем контур вокруг ссылки */
+   background: #1eb2e0;
+   border-radius: 8px; /* Цвет фона */
+   padding: 12px 16px; /* Отступ от текста до рамки */
+   font-size: 14px;
+   line-height: 20px;
+   font-weight: 600;
+   margin: 0px 0px 32px 0px;
+
+   &:hover {
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.15);
+   }
+   &:active {
+      background: #09abcf;
+   }
+   &_big {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      padding: 18px 24px;
+   }
+   &_white {
+      color: #1eb2e0;
+      background: #fff;
+      border: 2px solid #1eb2e0;
+   }
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+table tbody tr {
+   &.green {
+      color: green;
+   }
+}
+table tbody tr:hover {
+   background: #eef2f5;
+   border-radius: 8px;
+}
+
+.main {
+   white-space: nowrap;
+   .text_clip {
+      /* Запрещаем перенос строк */
+      overflow: hidden; /* Обрезаем все, что не помещается в область */
+
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      max-width: 450px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0px 50px 0px 0px;
+   }
+   .head {
+      font-size: 14px;
+      line-height: 20px;
+      color: #acb2bd;
+   }
+   table {
+      width: 100%;
+   }
+   td {
+      vertical-align: middle;
+      padding: 10px;
+      font-size: 16px;
+      // text-align: center;
+   }
+
+   font-size: 16px;
+   line-height: 24px;
+   color: #201f25;
+   &__table {
+   }
+}
+.disab {
+   @media screen and (max-width: 1400px) {
+      display: none;
+   }
+}
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+//====================================================================================================
+
+.popup {
+   -webkit-overflow-scrolling: touch;
+   background-color: rgba(0, 0, 0, 0.8);
+   position: fixed !important;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+
+   z-index: 100;
+   display: none;
+
+   &:target {
+      display: block;
+   }
+   &__area {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+   }
+   &__body {
+      justify-content: center;
+      min-height: 100%;
+      @include flexbox;
+      padding: 30px 10px;
+   }
+   &__container {
+      margin: 0 120px;
+   }
+   &__content {
+      background-color: #fff;
+      color: black;
+      width: 800px;
+      height: 562px;
+      position: relative;
+      background: #ffffff;
+      box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.05), 0px 8px 24px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+   }
+
+   &__close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      text-decoration: none;
+      font-size: 20px;
+      color: red;
+   }
+
+   &__title {
+      font-size: 32px;
+      line-height: 40px;
+      text-align: center;
+      letter-spacing: 0.01em;
+      color: #201f25;
+      margin: 52px 0px 46px 0px;
+   }
+
+   &__select {
+      width: 100px;
+   }
+
+   &__coment {
+      margin: 0px 0px 52px 0px;
+   }
+
+   &__button {
+      @include flexbox;
+      justify-content: space-evenly;
+   }
+}
+
+.popup {
+   &__select {
+   }
+}
+
+.spisok {
+   width: 100%;
+   margin: 0px 0px 24px 0px;
+   &__body {
+      display: inline-block;
+      border: 1px solid #d2d6de;
+      padding: 14px 0 14px 14px;
+      width: 100%;
+      border-radius: 8px;
+      appearance: none;
+      background: url(/img/icons/Vector.png);
+      background-repeat: no-repeat, repeat;
+      background-position: right 0.7em top 50%, 0 0;
+      // background-size: 0.65em auto, 100%;
+      font-size: 16px;
+      line-height: 24px;
+   }
+   &__title {
+      font-size: 12px;
+      line-height: 16px;
+      color: #515c73;
+   }
+}
+
+.coment {
+   width: 100%;
+
+   &__title {
+      font-size: 12px;
+      line-height: 16px;
+      color: #515c73;
+   }
+
+   &__txt {
+      display: block;
+      outline: none;
+      -moz-appearance: none;
+      resize: none;
+      width: 100%;
+      height: 139px;
+      border: 1px solid #d2d6de;
+      box-sizing: border-box;
+      border-radius: 8px;
+      font-size: 16px;
+      line-height: 24px;
+      color: #acb2bd;
+      padding: 14px 14px;
+      overflow: auto;
+   }
+}
