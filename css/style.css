@@ -180,13 +180,13 @@ body.lock {
   line-height: 16px;
 }
 .user__exit {
-  background: url(/img/user/выход.svg) 0 0/contain no-repeat;
+  background: url(img/user/выход.svg) 0 0/contain no-repeat;
   display: block;
   width: 24px;
   height: 24px;
 }
 .user__exit:hover {
-  background: url(/img/user/exit_to_app_24px.svg) 50% no-repeat;
+  background: url(img/user/exit_to_app_24px.svg) 50% no-repeat;
 }
 
 .sidenav__container {
@@ -232,52 +232,52 @@ body.lock {
   margin: 0px 28px 0px 0px;
 }
 .menu__icon_1 {
-  background: url(/img/menu/01.png) 50% no-repeat;
+  background: url(img/menu/01.png) 50% no-repeat;
   display: block;
   width: 24px;
   height: 24px;
 }
 .menu__icon_1:hover {
-  background: url(/img/menu/activ/01.png) 50% no-repeat;
+  background: url(img/menu/activ/01.png) 50% no-repeat;
 }
 .menu__icon_activ {
-  background: url(/img/menu/activ/01.png) 50% no-repeat;
+  background: url(img/menu/activ/01.png) 50% no-repeat;
 }
 .menu__icon_2 {
-  background: url(/img/menu/02.png) 50% no-repeat;
+  background: url(img/menu/02.png) 50% no-repeat;
   display: block;
   width: 24px;
   height: 24px;
 }
 .menu__icon_2:hover {
-  background: url(/img/menu/activ/02.png) 50% no-repeat;
+  background: url(img/menu/activ/02.png) 50% no-repeat;
 }
 .menu__icon_2_activ {
-  background: url(/img/menu/activ/02.png) 50% no-repeat;
+  background: url(img/menu/activ/02.png) 50% no-repeat;
 }
 .menu__icon_3 {
-  background: url(/img/menu/03.png) 50% no-repeat;
+  background: url(img/menu/03.png) 50% no-repeat;
   display: block;
   width: 24px;
   height: 24px;
 }
 .menu__icon_3:hover {
-  background: url(/img/menu/activ/03.png) 50% no-repeat;
+  background: url(img/menu/activ/03.png) 50% no-repeat;
 }
 .menu__icon_3_activ {
-  background: url(/img/menu/activ/03.png) 50% no-repeat;
+  background: url(img/menu/activ/03.png) 50% no-repeat;
 }
 .menu__icon_4 {
-  background: url(/img/menu/04.png) 50% no-repeat;
+  background: url(img/menu/04.png) 50% no-repeat;
   display: block;
   width: 24px;
   height: 24px;
 }
 .menu__icon_4:hover {
-  background: url(/img/menu/activ/04.png) 50% no-repeat;
+  background: url(img/menu/activ/04.png) 50% no-repeat;
 }
 .menu__icon_4_activ {
-  background: url(/img/menu/activ/04.png) 50% no-repeat;
+  background: url(img/menu/activ/04.png) 50% no-repeat;
 }
 .menu__text {
   font-size: 14px;
